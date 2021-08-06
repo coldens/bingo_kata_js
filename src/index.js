@@ -13,6 +13,11 @@ const main = async () => {
   app.use(express.json());
   app.use(helmet());
 
+  app.use(function (err, req, res, next) {
+    Logger.error(err.stack);
+    res.status(500).send('Something broke!');
+  });
+
   app.use(router);
 
   const port = Config.get('APP_PORT');

@@ -1,16 +1,19 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/sequelize');
-const { gameNumberModel } = require('./gameNumberModel');
 
-const gameModel = sequelize.define('game', {
+const gameNumberModel = sequelize.define('gameNumber', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
     allowNull: false,
   },
+  letter: {
+    type: DataTypes.STRING,
+  },
+  value: {
+    type: DataTypes.INTEGER,
+  },
 });
 
-gameModel.hasMany(gameNumberModel);
-
-module.exports = { gameModel };
+module.exports = { gameNumberModel };
