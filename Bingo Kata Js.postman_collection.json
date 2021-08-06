@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "c70d9c4b-648a-4d4b-a98d-17d206653966",
+		"name": "Bingo Kata Js",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/start-game",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"start-game"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Start Game",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/start-game",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"start-game"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"56-7SNSsCzB5cVtPpo0gF/dvW6CzWw\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Aug 2021 04:01:22 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"updatedAt\": \"2021-08-06T04:01:22.889Z\",\n    \"createdAt\": \"2021-08-06T04:01:22.889Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Generate Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bingo/:game_id/generate-card",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bingo",
+						":game_id",
+						"generate-card"
+					],
+					"variable": [
+						{
+							"key": "game_id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Generate Card",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/bingo/:game_id/generate-card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"bingo",
+								":game_id",
+								"generate-card"
+							],
+							"variable": [
+								{
+									"key": "game_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3461"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d85-IsbU0jrNRPQ46FtqAC0TFYsV4vk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Aug 2021 04:01:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 6,\n    \"winner\": null,\n    \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n    \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n    \"gameId\": 1,\n    \"bingoNumbers\": [\n        {\n            \"id\": 121,\n            \"letter\": \"B\",\n            \"value\": 11,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 122,\n            \"letter\": \"I\",\n            \"value\": 25,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 123,\n            \"letter\": \"N\",\n            \"value\": 40,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 124,\n            \"letter\": \"G\",\n            \"value\": 47,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 125,\n            \"letter\": \"O\",\n            \"value\": 69,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 126,\n            \"letter\": \"B\",\n            \"value\": 13,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 127,\n            \"letter\": \"I\",\n            \"value\": 24,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 128,\n            \"letter\": \"N\",\n            \"value\": 42,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 129,\n            \"letter\": \"G\",\n            \"value\": 58,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 130,\n            \"letter\": \"O\",\n            \"value\": 62,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 131,\n            \"letter\": \"B\",\n            \"value\": 2,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 132,\n            \"letter\": \"I\",\n            \"value\": 23,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 133,\n            \"letter\": \"N\",\n            \"value\": 34,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 134,\n            \"letter\": \"G\",\n            \"value\": 46,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 135,\n            \"letter\": \"O\",\n            \"value\": 61,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 136,\n            \"letter\": \"B\",\n            \"value\": 5,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 137,\n            \"letter\": \"I\",\n            \"value\": 26,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 138,\n            \"letter\": \"N\",\n            \"value\": 39,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 139,\n            \"letter\": \"G\",\n            \"value\": 49,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 140,\n            \"letter\": \"O\",\n            \"value\": 64,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 141,\n            \"letter\": \"B\",\n            \"value\": 7,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 142,\n            \"letter\": \"I\",\n            \"value\": 21,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 143,\n            \"letter\": \"G\",\n            \"value\": 51,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        },\n        {\n            \"id\": 144,\n            \"letter\": \"O\",\n            \"value\": 71,\n            \"check\": false,\n            \"createdAt\": \"2021-08-06T04:01:39.000Z\",\n            \"updatedAt\": \"2021-08-06T04:01:39.000Z\",\n            \"bingoId\": 6\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get-number/:gameId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-number",
+						":gameId"
+					],
+					"variable": [
+						{
+							"key": "gameId",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/get-number/:gameId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"get-number",
+								":gameId"
+							],
+							"variable": [
+								{
+									"key": "gameId",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "121"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"79-W+kpt4Jj93KE77lXBl3RvZQs/yc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Aug 2021 04:01:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"letter\": \"O\",\n    \"value\": 61,\n    \"gameId\": 1,\n    \"updatedAt\": \"2021-08-06T04:01:34.920Z\",\n    \"createdAt\": \"2021-08-06T04:01:34.920Z\"\n}"
+				}
+			]
+		}
+	]
+}
