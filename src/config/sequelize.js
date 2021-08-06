@@ -1,13 +1,14 @@
 const { Sequelize } = require('sequelize');
+const { Config } = require('./Config');
 const { Logger } = require('./logger');
 
 const sequelize = new Sequelize({
   dialect: 'mysql',
-  username: 'root',
-  password: 'jose1992',
-  database: 'bingo_kata_js',
-  host: 'localhost',
-  port: 3306,
+  username: Config.get('DB_USER'),
+  password: Config.get('DB_PASSWORD'),
+  database: Config.get('DB_DATABASE'),
+  host: Config.get('DB_HOST'),
+  port: Config.get('DB_PORT'),
   logging: (msg) => Logger.info(msg),
 });
 

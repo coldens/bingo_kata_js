@@ -6,7 +6,7 @@ const { sequelize } = require('./config/sequelize');
 const { router } = require('./controllers/router');
 
 const main = async () => {
-  await sequelize.sync();
+  await sequelize.sync({force: true});
 
   const app = express();
 

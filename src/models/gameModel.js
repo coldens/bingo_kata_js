@@ -1,5 +1,6 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../config/sequelize');
+const { bingoModel } = require('./bingoModel');
 const { gameNumberModel } = require('./gameNumberModel');
 
 const gameModel = sequelize.define('game', {
@@ -12,5 +13,6 @@ const gameModel = sequelize.define('game', {
 });
 
 gameModel.hasMany(gameNumberModel);
+gameModel.hasMany(bingoModel);
 
 module.exports = { gameModel };

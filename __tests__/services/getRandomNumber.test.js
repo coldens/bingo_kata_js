@@ -9,7 +9,7 @@ describe('getRandomNumber (unit)', () => {
     };
     const numbers = [];
 
-    jest.spyOn(gameModel, 'create').mockResolvedValue(game);
+    jest.spyOn(gameModel, 'findOne').mockResolvedValue(game);
     jest.spyOn(gameNumberModel, 'findAll').mockResolvedValue(numbers);
     jest.spyOn(gameNumberModel, 'create').mockImplementation((value) => {
       const number = gameNumberModel.build(value);

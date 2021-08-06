@@ -2,6 +2,7 @@ const { Logger } = require('../config/logger');
 const { RANGE_OF_NUMBERS } = require('../constants/RANGE_OF_NUMBERS');
 const { gameModel } = require('../models/gameModel');
 const { gameNumberModel } = require('../models/gameNumberModel');
+const _ = require('lodash');
 
 const getRandomNumber = async (id) => {
   const game = await gameModel.findOne({
@@ -45,7 +46,7 @@ const numberGenerator = (numbers, exclude = []) => {
 
   const allLetters = Object.keys(RANGE_OF_NUMBERS);
   const letters = allLetters.filter((val) => !exclude.includes(val));
-  const key = getRandomArbitrary(0, letters.length - 1);
+  const key = _.random(0, letters.length - 1, false);
   const letter = letters[key];
 
   exclude.push(letter);
@@ -83,20 +84,8 @@ const numberGenerator = (numbers, exclude = []) => {
  * @returns
  */
 const randomByLetter = (letter) => {
-  Logger.info({ letter }, 'calling randomByLetter');
   const range = RANGE_OF_NUMBERS[letter];
-  return getRandomArbitrary(range[0], range[1]);
-};
-
-/**
- * Get random number between the min and max
- * @param {number} min
- * @param {number} max
- * @returns
- */
-const getRandomArbitrary = (min, max) => {
-  Logger.info({ min, max }, 'calling getRandomArbitrary');
-  return Math.ceil(Math.random() * (max - min) + min);
+  return _.random(range[0], range[1], false);
 };
 
 module.exports = { getRandomNumber, numberGenerator };
